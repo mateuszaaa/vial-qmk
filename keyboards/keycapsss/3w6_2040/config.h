@@ -11,8 +11,8 @@
 #define EE_HANDS                  // Split handedness via eeprom
 #define SPLIT_LED_STATE_ENABLE    // Sync host leds (caps lock, ...)
 #define SPLIT_LAYER_STATE_ENABLE  // Enables syncing of the layer state between both halves
-#define SPLIT_POINTING_ENABLE     // Transmitting the pointing device status to the master side
-#define POINTING_DEVICE_RIGHT     // Pointing device on the right side (Required - pick one only)
+//#define SPLIT_POINTING_ENABLE     // Transmitting the pointing device status to the master side
+//#define POINTING_DEVICE_RIGHT     // Pointing device on the right side (Required - pick one only)
 //#define POINTING_DEVICE_LEFT    // Pointing device on the left side (Required - pick one only)
 
 #define RGBLIGHT_DEFAULT_MODE RGBLIGHT_EFFECT_BREATHING + 2
@@ -22,3 +22,18 @@
 #define RGBLIGHT_DEFAULT_SPD 2
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 9
+
+/* QMK */
+#define TAPPING_TERM 200
+//#define IGNORE_MOD_TAP_INTERRUPT /* for rolling on mod-tap keys */
+
+/* Miryoku */
+#define BILATERAL_COMBINATIONS
+#define BILATERAL_COMBINATIONS_LIMIT_CHORD_TO_N_KEYS 4 /* GUI, Alt, Ctrl, Shift */
+#define BILATERAL_COMBINATIONS_DELAY_MODS_THAT_MATCH MOD_MASK_GUI
+#define BILATERAL_COMBINATIONS_DELAY_MATCHED_MODS_BY 120  /* ms */
+#define BILATERAL_COMBINATIONS_ALLOW_CROSSOVER_AFTER 80   /* ms */
+#define BILATERAL_COMBINATIONS_ALLOW_SAMESIDED_AFTER 3000 /* ms */
+#define BILATERAL_COMBINATIONS_TYPING_STREAK_TIMEOUT 160  /* ms */
+//#define BILATERAL_COMBINATIONS_TYPING_STREAK_MODMASK (~MOD_MASK_SHIFT)
+
